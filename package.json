@@ -12,6 +12,7 @@
     "@expo/webpack-config": "^19.0.0",
     "@react-navigation/native": "^6.1.8",
     "@react-navigation/stack": "^6.3.18",
+    "@reduxjs/toolkit": "^1.9.7",
     "@sanity/client": "^6.6.0",
     "@sanity/image-url": "^1.0.2",
     "@types/react": "~18.2.14",
