@@ -4,9 +4,14 @@ import { useRoute, useNavigation } from "@react-navigation/native";
 import tw from "twrnc";
 import { urlFor } from "../sanity";
 import { StatusBar } from "expo-status-bar";
-import { ArrowLeftIcon } from "react-native-heroicons/outline";
+import {
+  ArrowLeftIcon,
+  ChevronRightIcon,
+  QuestionMarkCircleIcon,
+} from "react-native-heroicons/outline";
 import { StarIcon } from "react-native-heroicons/solid";
 import { MapPinIcon } from "react-native-heroicons/outline";
+import DishRow from "../Components/DishRow";
 
 const RestaurantScreen = () => {
   const navigation = useNavigation();
@@ -55,6 +60,34 @@ const RestaurantScreen = () => {
           </View>
           <Text style={tw`text-gray-500 mt-2 pb-2`}>{short_description}</Text>
         </View>
+
+        <TouchableOpacity
+          style={tw`flex-row items-center px-4  py-2 border-t border-b border-gray-100`}
+        >
+          <QuestionMarkCircleIcon
+            color="gray"
+            opacity={0.6}
+            size={20}
+            style={tw`mt-2`}
+          />
+          <Text style={tw`pt-2 text-sm font-bold mx-2`}>
+            Have a food allergy
+          </Text>
+          <ChevronRightIcon color="#00CCBB" style={tw`mx-45`} />
+        </TouchableOpacity>
+      </View>
+      <View>
+        <Text style={tw`px-4 pt-6 mb-3 font-bold text-xl`}>Menu</Text>
+        {/* Dish row */}
+        {dishes.map((dish) => (
+          <DishRow
+            id={dish._id}
+            name={dish.name}
+            description={dish.short_description}
+            price={dish.price}
+            image={dish.image}
+          />
+        ))}
       </View>
       <StatusBar style="auto" />
     </ScrollView>

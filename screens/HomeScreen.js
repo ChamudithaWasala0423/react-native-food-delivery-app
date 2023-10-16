@@ -33,7 +33,7 @@ const HomeScreen = () => {
             ...,
             resturants[] ->{
                 ...,
-              dish[]->
+                dishes[]->
                
             }
             
