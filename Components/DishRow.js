@@ -8,6 +8,7 @@ import {
   addToBasket,
   selectBasketItems,
   selectBasketItemsWithId,
+  removeToBasket,
 } from "../features/basketSlice";
 
 const DishRow = ({ id, name, description, price, imageUrl }) => {

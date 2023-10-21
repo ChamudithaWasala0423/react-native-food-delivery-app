@@ -3,6 +3,7 @@ import "react-native-gesture-handler";
 import { createStackNavigator } from "@react-navigation/stack";
 import HomeScreen from "./screens/HomeScreen";
 import RestaurantScreen from "./screens/RestaurantScreen";
+import BasketScreen from "./screens/BasketScreen";
 import { store } from "./store";
 import { Provider } from "react-redux";
 
@@ -15,6 +16,7 @@ export default function App() {
         <Stack.Navigator screenOptions={{ headerShown: false }}>
           <Stack.Screen name="Home" component={HomeScreen} />
           <Stack.Screen name="Restaurant" component={RestaurantScreen} />
+          <Stack.Screen name="Basket" component={BasketScreen} />
         </Stack.Navigator>
       </Provider>
     </NavigationContainer>
