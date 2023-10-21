@@ -36,4 +36,7 @@ const newLocal = (state, id) =>
   state.basket.items.filter((item) => item.id === id);
 export const selectBasketItemsWithId = newLocal;
 
+export const selectBasketTotal = (state) =>
+  state.basket.items.reduce(total, item) => (total += item.price), 0);
+
 export default basketSlice.reducer;
