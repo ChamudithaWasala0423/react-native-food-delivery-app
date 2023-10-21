@@ -1,6 +1,9 @@
 import { NavigationContainer } from "@react-navigation/native";
 import "react-native-gesture-handler";
-import { createStackNavigator } from "@react-navigation/stack";
+import {
+  createStackNavigator,
+  CardStyleInterpolators,
+} from "@react-navigation/stack";
 import HomeScreen from "./screens/HomeScreen";
 import RestaurantScreen from "./screens/RestaurantScreen";
 import BasketScreen from "./screens/BasketScreen";
@@ -16,7 +19,14 @@ export default function App() {
         <Stack.Navigator screenOptions={{ headerShown: false }}>
           <Stack.Screen name="Home" component={HomeScreen} />
           <Stack.Screen name="Restaurant" component={RestaurantScreen} />
-          <Stack.Screen name="Basket" component={BasketScreen} />
+          <Stack.Screen
+            name="Basket"
+            component={BasketScreen}
+            options={{
+              cardStyleInterpolator:
+                CardStyleInterpolators.forModalPresentationIOS,
+            }}
+          />
         </Stack.Navigator>
       </Provider>
     </NavigationContainer>

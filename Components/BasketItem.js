@@ -13,6 +13,7 @@ const BasketItem = () => {
   return (
     <View style={tw`absolute bottom-10 w-full z-50`}>
       <TouchableOpacity
+        onPress={() => navigation.navigate("Basket")}
         style={tw`mx-5 bg-[#00CCBB] p-4 rounded-lg flex-row items-center`}
       >
         <Text
