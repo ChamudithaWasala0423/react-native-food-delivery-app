@@ -68,8 +68,16 @@ const DeliveryScreen = () => {
         />
       </MapView>
 
-      <SafeAreaView>
-        <Image />
+      <SafeAreaView style={tw`bg-white flex-row items-center h-28`}>
+        <Image
+          source={{ url: "https://links.papareact.com/wru" }}
+          style={tw`h-12 w-12 bg-gray-300 p-4 rounded-full ml-5`}
+        />
+        <View style={tw`flex-1 mx-3`}>
+          <Text style={tw`text-lg mx-2`}>John Doe</Text>
+          <Text style={tw`text-gray-400 mx-2`}>Your Rider</Text>
+        </View>
+        <Text style={tw`text-[#00CCBB] text-lg mr-5 font-bold`}>Call</Text>
       </SafeAreaView>
     </View>
   );
