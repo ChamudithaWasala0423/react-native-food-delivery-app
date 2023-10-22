@@ -5,6 +5,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import * as Animatable from "react-native-animatable";
 import * as Progress from "react-native-progress";
 import { useNavigation } from "@react-navigation/native";
+import resturant from "../fooddeliveryapp/schemas/resturant";
 
 const PrepareImageOrderScreen = () => {
   const navigation = useNavigation();
@@ -30,7 +31,7 @@ const PrepareImageOrderScreen = () => {
       >
         Waiting for Restaurant to accept your order!
       </Animatable.Text>
-      <Progress.CircleSnail color={["white", "yellow"]} size={80} />
+      <Progress.Bar indeterminate={true} size={30} color="white" />
     </SafeAreaView>
   );
 };
