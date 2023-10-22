@@ -9,6 +9,8 @@ import RestaurantScreen from "./screens/RestaurantScreen";
 import BasketScreen from "./screens/BasketScreen";
 import { store } from "./store";
 import { Provider } from "react-redux";
+import PrepareImageOrderScreen from "./screens/PrepareImageOrderScreen";
+import DeliveryScreen from "./screens/DeliveryScreen";
 
 const Stack = createStackNavigator();
 
@@ -25,6 +27,21 @@ export default function App() {
             options={{
               cardStyleInterpolator:
                 CardStyleInterpolators.forModalPresentationIOS,
+            }}
+          />
+          <Stack.Screen
+            name="Prepare"
+            component={PrepareImageOrderScreen}
+            options={{
+              cardStyleInterpolator:
+                CardStyleInterpolators.forModalPresentationIOS,
+            }}
+          />
+          <Stack.Screen
+            name="Delivery"
+            component={DeliveryScreen}
+            options={{
+              cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
             }}
           />
         </Stack.Navigator>

@@ -32,7 +32,7 @@ const BasketScreen = () => {
     setGroupBasketItems(groupItems);
   }, [items]);
 
-  console.log(groupBasketItems);
+  //   console.log(groupBasketItems);
 
   return (
     <SafeAreaView style={tw`flex-1 bg-white`}>
@@ -101,7 +101,10 @@ const BasketScreen = () => {
             <Text>Order Total</Text>
             <Text style={tw`font-extrabold`}>Rs.{basketTotal + 190}.00</Text>
           </View>
-          <TouchableOpacity style={tw`p-4 rounded-lg bg-[#00CCBB] mx-4`}>
+          <TouchableOpacity
+            style={tw`p-4 rounded-lg bg-[#00CCBB] mx-4`}
+            onPress={() => navigation.navigate("Prepare")}
+          >
             <Text style={tw`text-center text-white text-lg font-bold`}>
               Place Order
             </Text>
